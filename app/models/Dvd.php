@@ -11,7 +11,7 @@ class Dvd{
 		->join('sounds','sounds.id','=','dvds.sound_id');
 
 		if($dvd_title){
-			$query->where('title','LIKE',"%$song_title%");
+			$query->where('title','LIKE',"%$dvd_title%");
 		}
 		if($genre != 'All'){
 			$query->where('genre_id','=',"$genre");
